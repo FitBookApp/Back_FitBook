@@ -8,7 +8,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class FitbookApplication implements CommandLineRunner {
 
   public static void main(String[] args) {
-    SpringApplication.run(FitbookApplication.class, args);
+    try {
+      SpringApplication.run(FitbookApplication.class, args);
+    } catch (Exception e) {
+      System.out.println(e.toString());
+    }
   }
 
   @Override
